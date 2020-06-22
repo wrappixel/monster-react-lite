@@ -1,0 +1,45 @@
+// 
+// Button lists margin
+// 
+.btn-list {
+    .btn {
+        margin-bottom: 5px;
+    }
+}
+
+// 
+// Circle Buttons
+// 
+// There are mixins which we have created in mixins/mix_buttons
+
+.btn-circle {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    line-height: 30px;
+
+    // Different Size of Buttons
+    // #####################################################################
+    &.btn-sm {
+        width: 35px;
+        height: 35px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    &.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 14px 10px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    &.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 14px 15px;
+        font-size: 24px;
+    }
+}

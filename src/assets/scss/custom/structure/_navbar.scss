@@ -1,0 +1,103 @@
+// 
+// Topbar
+// 
+.topbar {
+    position: relative;
+    height: $topbar-height;
+    background: $topbar;
+    z-index: 50;
+    transition: $transitions;
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.05);
+
+    .navbar-collapse {
+        padding: $navbar-collapse-padding;
+    }
+
+    .dropdown-toggle:after {
+        display: none;
+    }
+
+    .top-navbar {
+        min-height: $topbar-height;
+        padding: 0;
+
+        .navbar-header {
+            line-height: $topbar-navlink-height;
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: $topbar-navbrand-padding;
+                margin: 0;
+
+                .dark-logo {
+                    display: none;
+                }
+            }
+        }
+
+        .navbar-nav>.nav-item>.nav-link {
+            line-height: $topbar-navlink-height;
+            height: $topbar-navlink-height;
+            padding: $topbar-navlink-padding;
+            font-size: $topbar-navlink-font-size;
+        }
+
+        .navbar-nav>.nav-item {
+            transition: 0.2s ease-in;
+
+            &:hover {
+                background: $transparent-dark-bg;
+            }
+        }
+    }
+
+    .user-dd {
+        width: $topbar-dropdown-width;
+    }
+
+    .nav-toggler {
+        color: $theme-light;
+        padding: $topbar-togglar-padding;
+    }
+}
+
+// 
+// Mobile View Responsive
+// 
+@include media-breakpoint-down(md) {
+    .topbar .top-navbar {
+
+        .navbar-collapse.show,
+        .navbar-collapse.collapsing {
+            display: block;
+            width: 100%;
+            border-top: 1px solid $border-color;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+
+            .dropdown {
+                position: static;
+            }
+        }
+
+        .navbar-nav>.nav-item>.nav-link {
+            padding: 0 10px;
+        }
+
+        .navbar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            width: 100%;
+        }
+    }
+}

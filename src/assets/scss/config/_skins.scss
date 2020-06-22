@@ -1,0 +1,12 @@
+// #############################
+//  Theme Skin Color Exension for changing navbar colors
+// #############################
+%skin_gredient_1 {
+    background: #009efb;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #0178bc 0%, #00bdda 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #0178bc 0%, #00bdda 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #0178bc 0%, #00bdda 100%);
+}

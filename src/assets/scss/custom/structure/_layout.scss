@@ -1,0 +1,279 @@
+// ###############################################
+// Main wrapper
+// ###############################################
+#main-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+// ###############################################
+// Page Wrapper
+// ###############################################
+.page-wrapper {
+    position: relative;
+    background: $body-bg;
+    display: none;
+    transition: 0.2s ease-in;
+}
+
+.page-wrapper>.container-fluid {
+    padding: $page-wrapper-container-padding;
+    min-height: $container-min-height;
+}
+
+.page-wrapper>.page-content {
+    padding: 30px;
+    min-height: calc(100vh - 116px);
+}
+
+// ###############################################
+// Footer
+// ###############################################
+.footer {
+    background: $white;
+    border-top: 1px solid $border-color;
+    padding: $footer-padding;
+}
+
+
+// ################################################################################# //
+//  Vertical Layout
+// ################################################################################# //
+#main-wrapper[data-layout="vertical"] {
+
+    // Topbar
+    // ###############################################
+    .topbar .top-navbar .navbar-header {
+        //width: $sidebar-width-full;
+        transition: 0.2s ease-in;
+    }
+
+    // Sidebar type=full
+    // ###############################################
+    &[data-sidebartype="full"] {
+        .page-wrapper {
+            margin-left: $sidebar-width-full;
+        }
+    }
+
+    // Sidebar Postions
+    // ###############################################
+    &[data-sidebar-position="fixed"] {
+
+        // Topbar
+        // #############################################
+        .topbar .top-navbar .navbar-header {
+            position: fixed;
+            z-index: 10;
+        }
+
+        // Left sidebar
+        // #############################################
+        .left-sidebar {
+            position: fixed;
+        }
+    }
+
+    // Topbar Postions
+    // ###############################################
+    &[data-header-position="fixed"] {
+
+        // Topbar
+        // #############################################
+        .topbar {
+            position: fixed;
+            width: 100%;
+        }
+
+        // Page wrapper
+        // #############################################
+        .page-wrapper {
+            padding-top: $topbar-height;
+        }
+    }
+}
+
+// ################################################################################# //
+//  Vertical Layout - Responsive  Layout
+// ################################################################################# //
+// Desktop Screen
+@include media-breakpoint-up(md) {
+    #main-wrapper[data-layout="vertical"] {
+
+        // Sidebar type=full
+        // ###############################################
+        &[data-sidebartype="full"] {
+
+            // Topbar
+            // ###############################################
+            .topbar .top-navbar .navbar-header {
+                width: $sidebar-width-full;
+            }
+        }
+
+        // Sidebar type=full & overlay with fixed sidebar
+        // ###############################################
+        &[data-sidebar-position="fixed"][data-sidebartype="full"] {
+
+            // Topbar
+            // ###############################################
+            .topbar .top-navbar .navbar-collapse {
+                margin-left: $sidebar-width-full;
+            }
+        }
+
+        // Sidebar type=mini-sidebar with fixed sidebar
+        // ###############################################
+        &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+
+            // Topbar
+            // ###############################################
+            .topbar .top-navbar .navbar-collapse {
+                margin-left: $sidebar-width-mini;
+            }
+        }
+
+        // Sidebar type=mini-sidebar
+        // ###############################################
+        &[data-sidebartype="mini-sidebar"] {
+
+            // Topbar
+            // ###############################################
+            .topbar .top-navbar .navbar-header {
+                width: $sidebar-width-mini;
+
+                // Hide logo text
+                // 
+                .logo-text {
+                    display: none;
+                }
+
+                // on full sidebar or on hover state
+                // 
+                &.expand-logo {
+                    width: $sidebar-width-full;
+
+                    .logo-text {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        // Mini-sidebar with fixed sidebar
+        // ###############################################
+        &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+
+            // Topbar 
+            // 
+            .topbar .top-navbar .navbar-collapse {
+                margin-left: $sidebar-width-mini;
+            }
+        }
+
+        // Sidebar type=mini-sidebar
+        // ###############################################
+        &[data-sidebartype="mini-sidebar"] {
+
+            // Page wrapper
+            // 
+            .page-wrapper {
+                margin-left: $sidebar-width-mini;
+            }
+
+            // Sidebar UI Lists
+            // 
+            .sidebar-nav {
+
+                .hide-menu {
+                    display: none;
+                }
+
+                ul {
+                    .sidebar-item {
+
+                        // Main nav links
+                        // 
+                        .sidebar-link {
+                            padding: $minisidebar-link-padding;
+                        }
+                    }
+                }
+            }
+
+            // Left sidebar
+            // 
+            .left-sidebar {
+                width: $sidebar-width-mini;
+
+                &:hover {
+                    width: $sidebar-width-full;
+
+                    .sidebar-nav {
+
+                        .hide-menu {
+                            display: block;
+                        }
+
+                        // Sidebar Links
+                        // 
+                        ul {
+                            .sidebar-item {
+                                .sidebar-link {
+                                    padding: $sidebar-link-padding;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Screen
+// 
+@media(max-width:766px) {
+
+    // 
+    // Main wrapper
+    #main-wrapper {
+
+        // Sidebar type=mini-sidebar
+        // ###############################################
+        &[data-sidebartype="mini-sidebar"] {
+
+            // Left sidebar
+            // 
+            .left-sidebar,
+            .left-sidebar .sidebar-footer {
+                left: -$sidebar-width-full;
+            }
+        }
+
+        // Open sidebar
+        // ###############################################
+        &.show-sidebar {
+
+            .left-sidebar,
+            .left-sidebar .sidebar-footer {
+                left: 0;
+            }
+        }
+
+        // Sidebar position fixed with vertical layout && both with fixed
+        // ###############################################
+        &[data-layout="vertical"][data-sidebar-position="fixed"],
+        &[data-layout="vertical"][data-header-position="fixed"][data-sidebar-position="fixed"] {
+
+            // Topbar
+            // 
+            .topbar .top-navbar {
+                .navbar-collapse {
+                    position: relative;
+                    top: $topbar-height;
+                }
+            }
+        }
+    }
+}

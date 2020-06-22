@@ -1,0 +1,76 @@
+// Theme colors
+#main-wrapper {
+    &[data-layout="vertical"] {
+
+        /*This is for the logo bg*/
+        .topbar .top-navbar .navbar-header {
+
+            &[data-logobg="skin6"] {
+                background: $skin6;
+
+                .navbar-brand {
+                    .dark-logo {
+                        display: inline;
+                    }
+                }
+
+                .nav-toggler {
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    &[data-layout="vertical"] {
+
+        .topbar .navbar-collapse,
+        .topbar {
+            &[data-navbarbg="skin1"] {
+                @extend %skin_gredient_1;
+            }
+        }
+
+        /*This is for the sidebar bg*/
+        .left-sidebar {
+
+            &[data-sidebarbg="skin6"] {
+                background: $skin6;
+
+                .sidebar-nav {
+                    ul {
+                        background: $skin6;
+
+                        .sidebar-item {
+                            .sidebar-link {
+                                color: $sidebar-text-dark;
+                                opacity: 1;
+
+                                i {
+                                    color: $sidebar-icons-dark;
+                                }
+
+                                &.active {
+                                    color: $info;
+
+                                    i {
+                                        color: $info;
+                                    }
+                                }
+                            }
+
+                            &.selected>.sidebar-link {
+                                border-left: 3px solid $info;
+                                color: $info;
+                                opacity: 1;
+
+                                i {
+                                    color: $info;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

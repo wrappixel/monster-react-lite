@@ -1,0 +1,23 @@
+// 
+// Card
+//
+.card {
+    margin-bottom: $card-margin-bottom;
+
+    .card-subtitle {
+        margin-bottom: $card-subtitle-bottom;
+        font-weight: $font-weight-light;
+        color: $text-muted;
+    }
+
+    .card-title {
+        margin-bottom: $card-title-bottom;
+        font-weight: $font-weight-normal;
+        font-size: $h4-font-size;
+        color: $headings-color;
+    }
+
+    .card-header .card-title {
+        margin-bottom: 0;
+    }
+}
