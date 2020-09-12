@@ -11,7 +11,11 @@
 
 <!-- Description of Template -->
 <p>
- Lorem ipsume
+ Looking to get the <a href="https://www.wrappixel.com/templates/category/react-templates/">free react admin dashboard template</a> in modern design with a low on budget? Well, Monster React Lite by WrapPixel is the one you can try out right now at no extra cost. This simple, sober and clean template is basic with features but is extremely helpful for personal as well as commercial projects. It's based on the React framework along with the modern & modular design approach.
+</p>
+
+<p>
+    Interestingly, you get exposure to features like chart options, font icons, regular free updates, basic dashboard, ready-to-use widgets, and customization options. This template is fully responsive and supported by SaSSBase CSS.
 </p>
 
 <!-- Versions of Template -->
