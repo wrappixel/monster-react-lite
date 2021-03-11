@@ -50,7 +50,7 @@ const Header = () => {
                 <Collapse className="navbarbg" navbar data-navbarbg="skin1" >
                     <Nav className="ml-auto float-right" navbar>
                         <NavItem>
-                            <a href="link" className="btn btn-danger mr-2" style={{ marginTop: '15px' }}>Upgrade to Pro</a>
+                            <a href="https://www.wrappixel.com/templates/monster-react-admin/" className="btn btn-danger mr-2" style={{ marginTop: '15px' }}>Upgrade to Pro</a>
                         </NavItem>
                         {/*--------------------------------------------------------------------------------*/}
                         {/* Start Profile Dropdown                                                         */}
