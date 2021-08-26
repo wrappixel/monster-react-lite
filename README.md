@@ -53,7 +53,7 @@
 <h2>Resources</h2>
 <ul>
 <li>  
-  Live Demo: <a href="https://wrappixel.com/demos/free-admin-templates/monster-reactadmin-lite/main/" rel="nofollow">https://wrappixel.com/demos/free-admin-templates/monster-reactadmin-lite/main/</a>
+  Live Demo: <a href="https://demos.wrappixel.com/free-admin-templates/react/monster-react-free/main/#/dashboard" rel="nofollow">https://demos.wrappixel.com/free-admin-templates/react/monster-react-free/main/#/dashboard</a>
 </li>
 <li>
     Download Page: <a href="https://www.wrappixel.com/templates/monster-react-admin-lite/" rel="nofollow">
@@ -83,7 +83,7 @@
 </a>
 <p>
    Checkout our premium version of Monster React Admin for lots more features and ready to use page templates.<br>
-   <a href="https://wrappixel.com/demos/react-admin-templates/monster-react-admin/main/authentication/login">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/monster-react-admin/">Download</a>
+   <a href="https://demos.wrappixel.com/premium-admin-templates/react/monster-react/main/authentication/login">Check Live Preview</a> | <a href="https://www.wrappixel.com/templates/monster-react-admin/">Download</a>
 </p>
 
 <!-- Useful Links of Template -->
