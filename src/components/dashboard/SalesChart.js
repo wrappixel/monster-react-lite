@@ -43,6 +43,7 @@ const SalesChart = () => {
     },
     responsive: [
       {
+        breakpoint: 1024,
         options: {
           plotOptions: {
             bar: {
